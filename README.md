@@ -1,6 +1,6 @@
-# learning-vue
+# Learning-Vue
 
-This template should help get you started developing with Vue 3 in Vite.
+This repository contains components and applications made to learn Vue.
 
 ## Recommended IDE Setup
 
@@ -33,4 +33,4 @@ npm run build
 ```sh
 npm run lint
 ```
-# Learning-Vue
+
