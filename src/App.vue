@@ -1,47 +1,51 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+  import AppsPanel from './components/AppPanel.vue'
+
+  export default {
+    components: {
+      AppsPanel
+    },
+    data() {
+      return{
+        title: "X Perfiles sugeridos",
+        description: "Proyecto para aprender Vue que consiste en crear uun clon de la sección de sugerencias de perfiles de X. En ellas aparece el nombre, perfil, foto y botón de seguir que tiene animación y cambia según su estado.",
+        image: "/src/assets/x_follow_card.png",
+        alt: "Sección de sugerencias de perfiles de X."
+      }
+    }
+  }
 </script>
 
-<template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+<template>
+
+  <header>
+    <h1>Welcome to my Vue 3 Apps</h1>
+    <img alt="Vue logo" src="/src/assets/logo.svg" width="125" height="125" />
   </header>
+  
+  <br>
 
   <main>
-    <TheWelcome />
+    <AppsPanel :title :description :image :alt/>
   </main>
+
+  <br>
+
+  <footer>
+    <p>Footer content</p>
+  </footer>
+
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
+<style>
   header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    line-height: 1.5;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  body{
+    background-color: #0a0a0b;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
