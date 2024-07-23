@@ -1,3 +1,14 @@
+<template>
+  
+  <section class="AppPanel">
+    <img class="image" :alt="`Imagen del proyecto ${alt}`" :src="image" />
+    <p class="title"> {{title}} </p>
+    <p class="description"> {{description}} </p>    
+  </section>
+
+</template>
+
+
 <script>
 export default {
   props: {
@@ -21,39 +32,35 @@ export default {
 </script>
 
 
-<template>
-  
-  <section>
-    <img :alt="`Imagen del proyecto ${alt}`" :src="image" />
-    <h3> {{title}} </h3>
-    <p> {{description}} </p>    
-  </section>
-
-</template>
-
-
 <style>
 
-  section {
+  .AppPanel {
     background-color: #131416;
     border-radius: 10px;
-    margin: 10px;
-    align-items: center;
+    align-content: center;
+    gap: 30px;
+    min-width: 300px;
+    max-width: 400px;
   }
   
-  h3 {
+  .title {
     color: #FB6304;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
   }
 
-  p {
-    color: #D6D6D6;
-    padding:5px 20px 20px 20px;
+  .description {
+    color: #dddddd;
     text-align: justify;
+    font-size: 16px;
+    padding: 0 30px 30px 30px;
+    margin: 0;
   }
 
-  img {
+  .image {
     border-radius: 10px 10px 0 0;
     width: 100%;
   }
