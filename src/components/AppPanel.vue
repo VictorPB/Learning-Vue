@@ -1,9 +1,9 @@
 <template>
   
-  <section class="AppPanel">
-    <img class="image" :alt="`Imagen del proyecto ${alt}`" :src="image" />
-    <p class="title"> {{title}} </p>
-    <p class="description"> {{description}} </p>    
+  <section id="AppPanel">
+    <img id="image" :alt="`Imagen del proyecto ${alt}`" :src="image" />
+    <p id="title"> {{title}} </p>
+    <p id="description"> {{description}} </p>    
   </section>
 
 </template>
@@ -34,16 +34,18 @@ export default {
 
 <style>
 
-  .AppPanel {
+  #AppPanel {
     background-color: #131416;
     border-radius: 10px;
     align-content: center;
     gap: 30px;
-    min-width: 300px;
-    max-width: 400px;
+    min-width: 350px;
+    max-width: 450px;
+    min-height: 300px;
+    max-height: 400px;
   }
   
-  .title {
+  #title {
     color: #FB6304;
     padding: 10px;
     text-align: center;
@@ -52,7 +54,7 @@ export default {
     margin: 0;
   }
 
-  .description {
+  #description {
     color: #dddddd;
     text-align: justify;
     font-size: 16px;
@@ -60,7 +62,7 @@ export default {
     margin: 0;
   }
 
-  .image {
+  #image {
     border-radius: 10px 10px 0 0;
     width: 100%;
   }

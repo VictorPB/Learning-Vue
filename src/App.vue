@@ -1,16 +1,22 @@
 <script>
   import AppsPanel from './components/AppPanel.vue'
+  import TeamListItem from './components/TeamListItem.vue'
 
   export default {
     components: {
-      AppsPanel
+      AppsPanel,
+      TeamListItem
     },
     data() {
       return{
         title: "X Perfiles sugeridos",
         description: "Proyecto para aprender Vue que consiste en crear un clon de la sección de sugerencias de perfiles de X. En ellas aparece el nombre, perfil, foto y botón de seguir que tiene animación y cambia según su estado.",
         image: "/src/assets/x_follow_card.png",
-        alt: "Sección de sugerencias de perfiles de X."
+        alt: "Sección de sugerencias de perfiles de X.",
+
+        teamName: "Valderrubio FC",
+        teamImage: "/src/assets/peña.png",
+        gradientColors: ["#FFE974", "#1813EA"]
       }
     }
   }
@@ -25,7 +31,8 @@
   </header>
 
   <main>
-    <AppsPanel :title :description :image :alt/>
+    <AppsPanel :title :description :image :alt/> 
+    <TeamListItem :teamName :teamImage :gradientColors/>
   </main>
 
   <footer>
@@ -49,8 +56,7 @@
 
   main{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    gap:30px;
     margin: 30px;
   }
 
@@ -65,6 +71,15 @@
       width: 100px;
       height: 100px;
     }
+  }
+
+  footer{
+    transition: background-color 0.5s, transform 0.5s;
+  }
+
+  footer:hover{
+    background-color: #4272bf;
+    transform: scale(2);
   }
 
 </style>
