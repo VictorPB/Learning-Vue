@@ -21,11 +21,26 @@ export default {
       type: Array,
       required: true
     }
+  },
+  methods: {
+    setGradientColors(){
+      this.$el.style.setProperty('--gr_color0', this.gradientColors[0]);
+      this.$el.style.setProperty('--gr_color1', this.gradientColors[1]);
+    }
+  },
+  mounted(){
+    this.setGradientColors();
   }
 }
 </script>
 
 <style>
+
+  :root {
+    --gr_color0: #fff;
+    --gr_color1: #fff;
+  }
+
   #teamListItem {
     background-color: #2E3136;
     width: 475px;
@@ -50,8 +65,8 @@ export default {
     background-image: linear-gradient(
       -225deg,
       #fff 30%,
-      #1813EA 35%,
-      #FFE974 55%,
+      var(--gr_color0) 35%,
+      var(--gr_color1) 55%,
       #fff 60%
     );
     background-size: auto auto;
