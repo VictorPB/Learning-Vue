@@ -57,10 +57,10 @@ export default {
     transform: scale(1.1);
     background-image: linear-gradient(
       -225deg,
-      #fff 30%,
-      var(--gr_color0) 35%,
-      var(--gr_color1) 55%,
-      #fff 60%
+      #fff 25%,
+      var(--gr_color0) 40%,
+      var(--gr_color1) 50%,
+      #fff 65%
     );
     background-size: auto auto;
     background-clip: border-box;

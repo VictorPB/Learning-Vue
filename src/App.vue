@@ -1,3 +1,24 @@
+<template>
+
+  <header>
+    <img alt="Vue logo" src="/src/assets/logo.svg"/>
+    <h1>Welcome to my Vue Components and Apps</h1>
+  </header>
+
+  <main>
+    <AppsPanel :title :description :image :alt/> 
+    <TeamListItem :team/>
+    <PlayerCardStat statName="Asistencias" statValue="10"/>
+    <PlayerCard :player/>
+  </main>
+
+  <footer>
+    <p>Footer content</p>
+  </footer>
+
+</template>
+
+
 <script>
   import AppsPanel from './components/AppPanel.vue'
   import TeamListItem from './components/TeamListItem.vue'
@@ -28,8 +49,8 @@
         },
 
         player: {
-          name: "Roger Carbo",
-          image: "/src/assets/carbo.webp",
+          name: "Víctor Pérez",
+          image: "/src/assets/Victor2.png",
           team: {
             name: "Valderrubio FC",
             image: "/src/assets/peña.png",
@@ -40,37 +61,16 @@
           },
           stats: [
             {name: "Posición", value: "DC"},
-            {name: "Número", value: 27},
-            {name: "Goles", value: 13},
-            {name: "Asistencias", value: 9},
-            {name: "Edad", value: 25}
+            {name: "Número", value: "27"},
+            {name: "Goles", value: "14"},
+            {name: "Asistencias", value: "9"},
+            {name: "Edad", value: "23"}
           ]
         }
       }
     }
   }
 </script>
-
-
-<template>
-
-  <header>
-    <img alt="Vue logo" src="/src/assets/logo.svg"/>
-    <h1>Welcome to my Vue Components and Apps</h1>
-  </header>
-
-  <main>
-    <AppsPanel :title :description :image :alt/> 
-    <TeamListItem :team/>
-    <PlayerCardStat statName="Asistencias" statValue="10"/>
-    <PlayerCard :player/>
-  </main>
-
-  <footer>
-    <p>Footer content</p>
-  </footer>
-
-</template>
 
 
 <style>
