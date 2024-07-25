@@ -1,31 +1,23 @@
 <template>
   <section id="teamListItem">
-    <div id="gradient" :style="`background: linear-gradient(180deg, ${gradientColors[0]} 0%, ${gradientColors[1]} 100%);`"></div>
-    <img id="teamImage" :alt=" teamName" :src="teamImage" />
-    <p id="teamName"> {{teamName}} </p>
+    <div id="gradient" :style="`background: linear-gradient(180deg, ${team.colors.primary} 0%, ${team.colors.secondary} 100%);`"></div>
+    <img id="teamImage" :alt=" team.name" :src="team.image" />
+    <p id="teamName"> {{team.name}} </p>
   </section>
 </template>
 
 <script>
 export default {
   props: {
-    teamName: {
-      type: String,
-      required: true
-    },
-    teamImage: {
-      type: String,
-      required: true
-    },
-    gradientColors:{
-      type: Array,
+    team: {
+      type: Object,
       required: true
     }
   },
   methods: {
     setGradientColors(){
-      this.$el.style.setProperty('--gr_color0', this.gradientColors[0]);
-      this.$el.style.setProperty('--gr_color1', this.gradientColors[1]);
+      this.$el.style.setProperty('--gr_color0', this.team.colors.primary);
+      this.$el.style.setProperty('--gr_color1', this.team.colors.secondary);
     }
   },
   mounted(){
@@ -62,6 +54,7 @@ export default {
   }
 
   #teamListItem:hover #teamName{
+    transform: scale(1.1);
     background-image: linear-gradient(
       -225deg,
       #fff 30%,

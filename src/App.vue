@@ -1,11 +1,15 @@
 <script>
   import AppsPanel from './components/AppPanel.vue'
   import TeamListItem from './components/TeamListItem.vue'
+  import PlayerCardStat from './components/PlayerCardStat.vue'
+  import PlayerCard from './components/PlayerCard.vue';
 
   export default {
     components: {
       AppsPanel,
-      TeamListItem
+      TeamListItem,
+      PlayerCardStat,
+      PlayerCard
     },
     data() {
       return{
@@ -14,9 +18,34 @@
         image: "/src/assets/x_follow_card.png",
         alt: "Sección de sugerencias de perfiles de X.",
 
-        teamName: "Valderrubio FC",
-        teamImage: "/src/assets/peña.png",
-        gradientColors: ["#FFE974", "#1813EA"]
+        team: {
+          name: "Valderrubio FC",
+          image: "/src/assets/peña.png",
+          colors: {
+            primary: "#FFE974",
+            secondary: "#1813EA"
+          }
+        },
+
+        player: {
+          name: "Roger Carbo",
+          image: "/src/assets/carbo.webp",
+          team: {
+            name: "Valderrubio FC",
+            image: "/src/assets/peña.png",
+            colors: {
+              primary: "#FFE974",
+              secondary: "#1813EA"
+            }
+          },
+          stats: [
+            {name: "Posición", value: "DC"},
+            {name: "Número", value: 27},
+            {name: "Goles", value: 13},
+            {name: "Asistencias", value: 9},
+            {name: "Edad", value: 25}
+          ]
+        }
       }
     }
   }
@@ -32,7 +61,9 @@
 
   <main>
     <AppsPanel :title :description :image :alt/> 
-    <TeamListItem :teamName :teamImage :gradientColors/>
+    <TeamListItem :team/>
+    <PlayerCardStat statName="Asistencias" statValue="10"/>
+    <PlayerCard :player/>
   </main>
 
   <footer>
@@ -58,6 +89,7 @@
     display: grid;
     gap:30px;
     margin: 30px;
+    justify-items: center;
   }
 
   header{
@@ -73,13 +105,5 @@
     }
   }
 
-  footer{
-    transition: background-color 0.5s, transform 0.5s;
-  }
-
-  footer:hover{
-    background-color: #4272bf;
-    transform: scale(2);
-  }
 
 </style>
