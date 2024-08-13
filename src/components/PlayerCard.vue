@@ -35,7 +35,7 @@ import PlayerCardStat from './PlayerCardStat.vue';
   width: 400px;
   height: 480px;
   border-radius: 15px;
-  background-color: #131416;
+  background-color: #2E3136;
   display: grid;
   grid-template-rows: 2;
   grid-template-columns: 2;

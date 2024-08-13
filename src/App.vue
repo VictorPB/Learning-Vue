@@ -10,6 +10,7 @@
     <TeamListItem :team/>
     <PlayerCardStat statName="Asistencias" statValue="10"/>
     <PlayerCard :player/>
+    <MatchResult :team1 :team2 :result :date/>
   </main>
 
   <footer>
@@ -24,13 +25,15 @@
   import TeamListItem from './components/TeamListItem.vue'
   import PlayerCardStat from './components/PlayerCardStat.vue'
   import PlayerCard from './components/PlayerCard.vue';
+  import MatchResult from './components/MatchResult.vue';
 
   export default {
     components: {
       AppsPanel,
       TeamListItem,
       PlayerCardStat,
-      PlayerCard
+      PlayerCard,
+      MatchResult
     },
     data() {
       return{
@@ -66,7 +69,29 @@
             {name: "Asistencias", value: "9"},
             {name: "Edad", value: "23"}
           ]
-        }
+        },
+
+        team1:{
+          name: "Valderrubio FC",
+          image: "/src/assets/peña.png",
+          colors: {
+            primary: "#FFE974",
+            secondary: "#1813EA"
+          }
+        },
+        team2:{
+          name: "Atletico de Madrid",
+          image: "/src/assets/Atleti.png",
+          colors: {
+            primary: "#FF0000",
+            secondary: "#FFFFFF"
+          }
+        },
+        result:{
+          team1: 5,
+          team2: 2
+        },
+        date: "18/08 - 21:00"
       }
     }
   }

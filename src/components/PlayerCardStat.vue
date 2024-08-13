@@ -26,7 +26,7 @@ export default {
   width: 75px;
   height: 75px;
   border-radius: 15px;
-  background: #2E3136;
+  background: #4B5058;
 
   display: block;
   align-content:space-evenly;
