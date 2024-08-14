@@ -32,7 +32,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 
   #AppPanel {
     background-color: #131416;

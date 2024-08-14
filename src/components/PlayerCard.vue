@@ -29,7 +29,7 @@ import PlayerCardStat from './PlayerCardStat.vue';
 }
 </script>
 
-<style>
+<style scoped>
 
 .playerCard {
   width: 400px;

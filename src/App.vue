@@ -11,6 +11,9 @@
     <PlayerCardStat statName="Asistencias" statValue="10"/>
     <PlayerCard :player/>
     <MatchResult :team1 :team2 :result :date/>
+    <MatchResultMVP :team1 :team2 :result />
+    <MVPCard :player :team1 :team2 :result/>
+
   </main>
 
   <footer>
@@ -26,6 +29,8 @@
   import PlayerCardStat from './components/PlayerCardStat.vue'
   import PlayerCard from './components/PlayerCard.vue';
   import MatchResult from './components/MatchResult.vue';
+  import MVPCard from './components/MVPCard.vue';
+  import MatchResultMVP from './components/MatchResultMVP.vue';
 
   export default {
     components: {
@@ -33,7 +38,9 @@
       TeamListItem,
       PlayerCardStat,
       PlayerCard,
-      MatchResult
+      MatchResult,
+      MatchResultMVP,
+      MVPCard
     },
     data() {
       return{
@@ -83,8 +90,8 @@
           name: "Atletico de Madrid",
           image: "/src/assets/Atleti.png",
           colors: {
-            primary: "#FF0000",
-            secondary: "#FFFFFF"
+            primary: "#F00",
+            secondary: "#FFF"
           }
         },
         result:{
@@ -98,7 +105,7 @@
 </script>
 
 
-<style>
+<style scoped>
   #app {
     display: grid;
     grid-template-columns: 1fr;

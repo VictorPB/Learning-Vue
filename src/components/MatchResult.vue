@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .MatchResultComponent {
     background-color: #2E3136;
     width: 365px;
